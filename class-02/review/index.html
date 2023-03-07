@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 01</title>
+  <style>
+    p {
+      font-family: roboto;
+      font-size: 20px;
+      border: solid;
+    }
+
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #f2f2f2;
+      color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="margin-top: 0;color: red;background-color: black;text-align: center;">Class 1 Lab</h1>
+  </header>
+  <main>
+    <p class="first" style="color: #ff8906;background-color: #0f0e17;">What's your name?</p>
+    <p class="second" style="color: #f25f4c;background-color: #0f0e17;">What's your favorite pizza topping topping?
+    </p>
+    <p class="third" style=" color:#fffffe;background-color: #e53170;">What is your favorite style of pizza?</p>
+    <p class="fourth" style="color: #7f5af0;background-color: #16161a;">Where is your favorite place?</p>
+  </main>
+  <footer>
+    Made for Code Fellows class seattle-code-201d98
+  </footer>
+  <script>
+    let name = prompt("What's your name")
+    console.log(name);
+    alert('Your name is: ' + name);
+    let topping = prompt("What's your favorite pizza topping?")
+    console.log(name);
+    let style = prompt("What is your favorite style of pizza?")
+    console.log(name)
+    let place = prompt("Where is your favorite place")
+    console.log(name)
+    alert("Your name is " + name + " and you like to have " + topping + " on your " + style + " style pizza while you're hanging out at the " + place + ".");
+    // alert(`Your name is ${name} and you like to have `)
+  </script>
+</body>
+
+</html>
