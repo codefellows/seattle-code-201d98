@@ -1,0 +1,19 @@
+h1 {
+  /* margin: 10px 20px 30px 40px; */
+  margin: 15px;
+  border: 2px solid red;
+  padding: 8px;
+  /* width: 500px; */
+  text-align: center;
+}
+/* header {
+  margin: 10px;
+} */
+/* body {
+  margin: 8px;
+} */
+p {
+  margin: 15px;
+  border: thin solid black;
+  padding: 8px;
+}
