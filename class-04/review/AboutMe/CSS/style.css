@@ -1,0 +1,52 @@
+a{
+    float: right;
+    color: silver;
+}
+
+header{
+    padding-left: 50px;
+}
+
+body{
+    height: 100%;
+    width: 97%;
+    background-color: rgb(7,11,24);
+}
+
+h1{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*code for the content bux was taken from https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers*/
+
+.content{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 300px;
+    text-align: center;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    height: 60px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 75px;
+}
+
+ol{
+   float: left; 
+   margin-left: 450px;
+}
+
