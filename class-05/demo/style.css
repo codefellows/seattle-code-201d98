@@ -1,0 +1,25 @@
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  color: turquoise;
+  background-color: yellow;
+}
+
+article .card-img {
+  width: 200px;
+}
+
+img {
+  max-width: 500px;
+  margin: 8px;
+  float: left;
+}
+
+p {
+  font-family: sans-serif;
+  line-height: 30px;
+}
+
+.text span {
+  color: blue;
+}
