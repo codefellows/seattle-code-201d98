@@ -1,0 +1,11 @@
+table {
+  background-color: grey;
+}
+
+th {
+  border: thin solid red;
+}
+
+td {
+  border: thin solid yellow;
+}
