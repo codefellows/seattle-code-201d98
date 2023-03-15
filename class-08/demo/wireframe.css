@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  border-bottom: thin solid black;
+}
+
+#navigation {
+  height: 100px;
+}
+
+a {
+  margin: 100px;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  border: thin solid red;
+  /* This will center display: block elements */
+  margin: 0 auto;
+  height: calc(100vh - 200px);
+}
+
+img {
+  margin: 30px 20px;
+}
+
+p {
+  padding: 0 20px;
+  margin: 30px 40px;
+  font-size: 35px;
+  border: thin solid purple;
+  height: 250px;
+  overflow-y: scroll;
+}

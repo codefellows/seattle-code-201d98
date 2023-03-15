@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  /* layout for the primary-axis */
+  justify-content: space-around; 
+  /* layout for the secondary axis */
+  align-items: center;
+  background-color: grey;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  background-color: lightgrey;
+}
+
+p {
+  border: thin solid red;
+}
