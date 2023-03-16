@@ -1,0 +1,33 @@
+table {
+  background-color: grey;
+}
+
+th {
+  border: thin solid red;
+}
+
+td {
+  border: thin solid yellow;
+}
+
+#pokemon-form {
+  max-width: 300px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section {
+  margin: 8px 0;
+  border: thin solid grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-section input {
+  border: none;
+  border-bottom: thin solid blue;
+}

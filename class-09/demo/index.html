@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Forms!</title>
+</head>
+<body>
+  <header>
+    <h1>HTMl Form Elements</h1>
+  </header>
+  <main>
+    <!-- Wrap all inputs associated with a form feature -->
+    <!-- <form>
+
+       <fieldset>
+        <legend>User Info</legend>
+        <label for="email-input">Email</label>
+        <input type="email" placeholder="email@domain.com" id="email-input" name="email_text">
+        <label for="username-input">Username</label>
+        <input type="text" placeholder="timmy" id="username-input" name="username_text">
+      </fieldset>
+      <fieldset>
+        <legend>Number Data</legend>
+        <label for="number-input">Enter a number</label>
+        <input type="number" id="number-input" name="number_value">
+        <input type="date">
+        <input type="button" value="Click me">
+        <button>Click Me (Triggers Submit)</button>
+      </fieldset> 
+    </form> -->
+
+    <table id="table-values">
+      <tfoot id="footer-row"></tfoot>
+    </table>
+
+    <form id="pokemon-form">
+      <fieldset>
+        <legend>Catch A Pokemon!</legend>
+        <section class="form-section">
+          <label for="name-input">Name</label>
+          <input type="text" id="name-input" name="pokemon_name" placeholder="Pikachu">
+        </section>
+        <section class="form-section">
+          <label for="type-input">Type</label>
+          <input type="text" id="type-input" name="pokemon_type" placeholder="electric">
+        </section>
+        <section class="form-section">
+          <label for="hp-input">Health Points</label>
+          <input type="number" id="hp-input" name="pokemon_hp" placeholder="100">
+        </section>
+        <button>Catch Me!</button>
+      </fieldset>
+      <input type="button" id="test-button" value="Test-Click">
+    </form>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

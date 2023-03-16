@@ -1,0 +1,136 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    max-width: 960px; 
+    max-height: 140px;
+    margin: auto;
+    font-weight: bold;
+  }
+  
+  header a {
+    margin-left: 60px; 
+    font-size: 1.5rem;
+  }
+  
+  #nav {
+    height: auto; 
+    max-height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-right: 20px;
+    
+  }
+  
+
+   main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .img {
+    flex-shrink: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .heroImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -20px;
+  }
+  
+  .subBanner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .subBanner img {
+    margin-top: 30px;
+    max-width: 300px;
+    margin-right: 30px;
+    
+  }
+
+  .meat {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 960px;
+    margin-left: 0;
+  }
+  
+  .meat img {
+    max-height: 400px;
+    max-width: 480px;
+    margin-right: 30px;
+  }
+  
+  .img-wrapper {
+    max-width: 480px;
+    margin-right: 30px;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .img-wrapper img {
+    max-height: 400px;
+    max-width: auto;
+    /* width: 100%; */
+    width: auto;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 50%;
+   
+    /* height: 100%; */
+    max-width: 480px;
+    max-height: 400px;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+  }
+  
+  .meat h2, .meat p, .meat button {
+    margin: 0;
+    padding: 0;
+  }
+  .meat h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .meat p{
+    padding: 0 20px;
+    /* margin: 30px 40px; */
+    font-size: 1.5rem;
+    overflow-y: scroll;
+    height: 50%;
+  }
+
+  button {
+    width: 66.66%;
+    height: 11.11%;
+    border-radius: 10px;
+    background-color: #b1afaf;
+    margin-top: 
+  }
+
+  footer .img {
+    height: 220px;
+    width: 960px;
+    margin-top: 0px;
+  }
