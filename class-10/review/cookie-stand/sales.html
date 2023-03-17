@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Cookies Per Hour</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <header>
+        <h1>Average Cookies per Hour</h1>
+    </header>
+    <section class="row">
+        <table id="cookieTable">
+            <thead id="table-head">
+            </thead>
+            <tbody id="table-values">
+            </tbody>
+            <tfoot id="table-foot">
+            </tfoot>
+        </table>
+    </section>
+    <form id="store-form">
+            <fieldset>
+                <legend id="fieldsettitle">Add A Store</legend>
+                <section>
+                    <label for="city-input">City of Store (required)</label>
+                    <input type="text" id="city-input" name="store_city" placeholder="Seattle" required>
+                </section>
+                <section>
+                    <label for="min-input">Minimum Cookies Per Hour (required)</label>
+                    <input type="number" id="min-input" name="store_min" placeholder="2" required min="0">
+                </section>
+                <section>
+                    <label for="max-input">Maximum Cookies Per Hour (required)</label>
+                    <input type="number" id="max-input" name="store_max" placeholder="42" required min="0">
+                </section>
+                <section>
+                    <label for="avg-input">Avg Cookie Per Customer (required)</label>
+                    <input type="number" id="avg-input" name="store_avg" placeholder="5.9" required min="0">
+                </section>
+                <button>Add Store to Table!</button>
+            </fieldset>
+        </form>
+    <footer>
+        <a href="index.html">Click to go back to home</a>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+    </body>
+</html>
