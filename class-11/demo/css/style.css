@@ -1,0 +1,21 @@
+
+/* Make the parent a grid and specify rows and columns */
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 75px 75px 75px;
+}
+
+.item {
+  border: thin solid red;
+}
+
+/* Children can resize and position themselves */
+#item1 {
+  /* grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+  /* justify-self: center;
+  align-self: center; */
+}
