@@ -55,7 +55,7 @@ function renderGoats() {
   goat2.timesShown += 1;
 }
 
-let eventId = voteTrackerEl.addEventListener('click', function(event) {
+function handleGoatClick(event) {
   console.log(event.target); // event.target always represents the exact element where an event occurred.
 
   // identify which image was clicked on??
@@ -72,6 +72,29 @@ let eventId = voteTrackerEl.addEventListener('click', function(event) {
     renderGoats();
     roundsOfVoting--;
   } else {
-    voteTrackerEl.removeEventListener('click', eventId);
+    voteTrackerEl.removeEventListener('click', handleGoatClick);
   }
-});
+}
+
+voteTrackerEl.addEventListener('click', handleGoatClick);
+
+// let eventId = voteTrackerEl.addEventListener('click', function(event) {
+//   console.log(event.target); // event.target always represents the exact element where an event occurred.
+
+//   // identify which image was clicked on??
+//   let goatThatWasClicked = event.target.id;
+//   state.forEach(image => {
+//     if (image.name === goatThatWasClicked) {
+//       image.timesClicked += 1; // mutation of an object
+//     }
+//   });
+//   console.log('UPDATED STATE', state);
+
+//   // re-render new goat images -> random goat image from state
+//   if (roundsOfVoting) {
+//     renderGoats();
+//     roundsOfVoting--;
+//   } else {
+//     voteTrackerEl.removeEventListener('click', eventId);
+//   }
+// });
