@@ -1,0 +1,137 @@
+'use strict';
+
+const state = [];
+let roundsOfVoting = 5;
+let chartObj = null;
+
+function Image(name, source) {
+  this.name = name;
+  this.timesClicked = 0;
+  this.timesShown = 0;
+  this.source = source;
+}
+
+state.push(new Image('cruisin goat', '/assets/cruisin-goat.jpg'));
+state.push(new Image('float your goat', '/assets/float-your-goat.jpg'));
+state.push(new Image('goat logo', '/assets/goat-logo.png'));
+state.push(new Image('goat away', '/assets/goat-away.jpg'));
+state.push(new Image('goat out of hand', '/assets/goat-out-of-hand.jpg'));
+state.push(new Image('kissing goat', '/assets/kissing-goat.jpg'));
+state.push(new Image('sassy goat', '/assets/sassy-goat.jpg'));
+state.push(new Image('smiling goat', '/assets/smiling-goat.jpg'));
+state.push(new Image('sweater goat', '/assets/sweater-goat.jpg'));
+
+let imgEls = document.querySelectorAll('img'); //array like thing filled with all the img elements in my html
+let voteTrackerEl = document.getElementById('vote-tracker'); 
+
+console.log("CURRENTLY RENDERED IMAGES", imgEls);
+
+console.log('CURRENT STATE', state);
+
+// render our first goat images
+// imgEls[0].src = state[0].source;
+// imgEls[0].id = state[0].name;
+// imgEls[1].src = state[1].source;
+// imgEls[1].id = state[1].name;
+renderGoats();
+
+function generateRandomGoat() {
+  return Math.floor(Math.random() * state.length);
+}
+
+function renderGoats() {
+  // find some goats from state
+  let goat1 = state[generateRandomGoat()];
+  let goat2 = state[generateRandomGoat()];
+  console.log('GOATS to re-render', imgEls, goat1, goat2);
+  while (goat1.name === goat2.name){
+    goat2 = state[generateRandomGoat()];
+  }
+
+  console.log('CURRENTLY RENDERED Images', imgEls);
+  console.log('FUTURE IMAGES', goat1, goat2);
+
+  // this should garuantee fresh goats
+  imgEls[0].src = goat1.source; // this makes things render
+  imgEls[0].id = goat1.name;
+  goat1.timesShown += 1;
+  imgEls[1].src = goat2.source;
+  imgEls[1].id = goat2.name;
+  goat2.timesShown += 1;
+}
+
+function handleGoatClick(event) {
+  console.log(event.target); // event.target always represents the exact element where an event occurred.
+
+  // identify which image was clicked on??
+  let goatThatWasClicked = event.target.id;
+  state.forEach(image => {
+    if (image.name === goatThatWasClicked) {
+      image.timesClicked += 1; // mutation of an object
+    }
+  });
+  console.log('UPDATED STATE', state);
+
+  // re-render new goat images -> random goat image from state
+  if (roundsOfVoting) {
+    renderGoats();
+    roundsOfVoting--;
+  } else {
+    voteTrackerEl.removeEventListener('click', handleGoatClick);
+    chartObj = drawChart();
+  }
+}
+
+voteTrackerEl.addEventListener('click', handleGoatClick);
+
+// get the canvas Element
+const canvasEl = document.getElementById('chart');
+
+function drawChart() {
+  let labels = []
+  let timesShownValues = [];
+  let timesClickedValues = []
+  // look at all object inside of state
+  state.forEach(goat => {
+    // labels??
+    labels.push(goat.name);
+    // dataset values??
+    timesShownValues.push(goat.timesShown);
+    timesClickedValues.push(goat.timesClicked);
+  });
+
+  return new Chart(canvasEl, {
+    type: 'bar',
+    data: {
+      labels: labels, // how can we get the names of our goats??
+      datasets: [{
+        label: 'Times Shown',
+        data: timesShownValues, // where does this data live?
+        borderWidth: 1
+      }, {
+        label: 'Times Clicked',
+        data: timesClickedValues, // where does this data live?
+        borderWidth: 1
+      }], // do we have more than 1 dataset?
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+let buttonEl = document.getElementById('update-chart');
+buttonEl.addEventListener('click', function () {
+  updateChart([1, 2, 3, 4,5, 6, 7, 8, 9]);
+});
+
+// updating currently rendered chart
+function updateChart(data) {
+  console.log("CHART OBJECT TO UPDATE", chartObj.data);
+  chartObj.data.datasets[0].data = data;
+  chartObj.update();
+}

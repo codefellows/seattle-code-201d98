@@ -1,0 +1,62 @@
+body{
+    background-color: #D8D8D8;
+    opacity: 97%;
+}
+#vote-tracker{
+    display: grid;
+    width: 70%px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    grid-gap: 3px;
+}
+
+header{
+    float:left;
+    height: 75px;
+    width: 100%;
+    background: #408E91;
+    text-align: center;
+}
+
+img{
+    height: 100px;
+}
+img:hover{
+    border: darkorange solid;
+}
+
+#results{
+    height: 900px;
+    width: 150px;
+    float: left;
+    background-color: #245953;
+}
+
+#for-all {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#lorem{
+    display: grid;
+    overflow: scroll;
+    padding-left: 10px;
+    background-color: #D8D8D8;
+}
+article{
+    overflow:scroll;
+}
+
+footer{
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #E49393;
+    position: relative;
+    height: 177px;
+}
+footer > h5{
+    
+    opacity: 50%;
+}

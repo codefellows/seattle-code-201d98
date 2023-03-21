@@ -1,0 +1,19 @@
+#vote-tracker {
+  border: thin solid red;
+}
+
+h1 {
+  text-align: center;
+}
+
+#vote-tracker {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+}
+
+img {
+  height: 100%;
+  margin: 0 20px;
+}
