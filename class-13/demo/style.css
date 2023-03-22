@@ -1,0 +1,62 @@
+footer {
+  background-color: lightblue;
+  height: 150px;
+  width: 100vw;
+  position: fixed;
+  bottom: -100px;
+  transition: 0.5s ease-in-out;
+}
+
+footer:hover {
+  bottom: -50px;
+  transition: 1s ease-in-out;
+}
+
+footer:active {
+  /* background-color: blue;
+  color: white; */
+  /* transition: .5s ease-in-out; */
+  /* animation-name: jiggle; */
+  animation-duration: 1s;
+}
+
+footer p {
+  text-align: center;
+}
+
+.open {
+  animation-name: slide;
+  animation-duration: .5s;
+}
+
+#navigation {
+  display: flex;
+  width: 100%;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+/* define percentages of the total animation */
+@keyframes jiggle {
+ 0% {
+  bottom: 0px;
+ }
+
+ 50% {
+  bottom: 200px;
+ }
+
+ 100% {
+  bottom: 100px;
+ }
+}
+
+@keyframes slide {
+  0% {
+    bottom: -50px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
+}
